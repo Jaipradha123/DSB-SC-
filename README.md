@@ -48,12 +48,33 @@ Model Waveform
 <img width="703" height="679" alt="image" src="https://github.com/user-attachments/assets/e7c7c7f8-ccf2-41ac-b1f3-325989941a6f" />
 
 Program
-
+```
+Ac=8;
+fc=5000;
+Am=5;
+fm=500;
+fs=50000;
+t=0:1/fs:2/fm;
+Wm=2*3.14*fm;
+Wc=2*3.14*fc;
+Em=Am*sin(2*3.14*fm*t);
+subplot(3,1,1);
+plot(t,Em);
+Ec=Ac*sin(2*3.14*fc*t);
+subplot(3,1,2);
+plot(t,Ec);
+Edsbsc=((Am/2)*cos((Wc-Wm)*t))-((Am/2)*cos((Wc+Wm)*t));
+subplot(3,1,3);
+plot(t,Edsbsc);
+```
 Output Graph
+<img width="1649" height="861" alt="Screenshot 2025-09-24 200035" src="https://github.com/user-attachments/assets/cb1a45bd-90a0-48f5-a372-f589e605d42a" />
 
 
-Tablular Column
-
+## Tablular Column
+![WhatsApp Image 2025-11-03 at 11 22 54_cd1e4e82](https://github.com/user-attachments/assets/8cb06108-82e0-493b-a9c6-9373f78e2cda)
+## calculation
+![WhatsApp Image 2025-11-03 at 11 23 06_11ab6c42](https://github.com/user-attachments/assets/d58ae132-bba2-47d5-8dd7-da223fd64eae)
 
 Result
 
